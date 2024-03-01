@@ -2,12 +2,12 @@
   background-color: #FFFFFF;
   background-size: cover;
   background-position: center;
+  max-width: 1200px;
 }
 
 @media screen and (max-width: 768px) {
   .content {
     padding: 10px;
-    max-width: 1200px;
     margin: 0 auto;
   }
   
