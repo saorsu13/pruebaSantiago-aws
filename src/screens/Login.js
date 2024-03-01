@@ -65,6 +65,9 @@ const Login = () => {
     setError('');
     setIsModalOpen(false);
   };
+  const handleTouchStart = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className="contenedor-centrado">
@@ -73,11 +76,21 @@ const Login = () => {
       <p>Confianza para tu futuro financiero</p>
       <h2>Inicia Sesión</h2>
       <label>Correo electronico:</label>
-      <input type="email" value={correo} onChange={(e) => setCorreo(e.target.value)} />
+      <input
+        type="email"
+        value={correo}
+        onChange={(e) => setCorreo(e.target.value)}
+        onTouchStart={handleTouchStart} // Manejar el evento onTouchStart para evitar el zoom al tocar el campo de entrada
+      />
       <label>Contraseña:</label>
-      <input type="password" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
+      <input
+        type="password"
+        value={contrasena}
+        onChange={(e) => setContrasena(e.target.value)}
+        onTouchStart={handleTouchStart} // Manejar el evento onTouchStart para evitar el zoom al tocar el campo de entrada
+      />
       <button onClick={handleIniciarSesion}>Iniciar Sesión</button>
-       <Modal
+      <Modal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         message={error}
