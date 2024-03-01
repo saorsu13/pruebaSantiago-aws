@@ -1,6 +1,5 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -37,26 +36,16 @@
   z-index: 100;
 }
 
-.fa-bars {
-  margin-right: 10px;
-  color: white;
-}
-
-.nav-list li {
-  text-align: center;
-  padding: 10px;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .navbar-toggle {
-      display: none;
+    display: block;
   }
 
   .nav-list {
-      display: flex !important;
+    display: none;
   }
 
-  .nav-list.active {
-      display: none;
+  .nav-item {
+    text-align: center;
   }
 }
