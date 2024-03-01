@@ -61,7 +61,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <Header />
-      <main className="content">
+      <div className="content">
         <h2>Listado Bancos</h2>
         {initialLoading ? (
           <div>Cargando...</div>
@@ -75,9 +75,9 @@ const Home = () => {
             </div>
           </div>
         )}
-      </main>
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default Home
