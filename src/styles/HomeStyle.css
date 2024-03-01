@@ -1,6 +1,7 @@
 .home-container {
   background-color: #FFFFFF;
-  padding: 20px;
+  background-size: cover;
+  background-position: center;
 }
 
 @media screen and (max-width: 768px) {
