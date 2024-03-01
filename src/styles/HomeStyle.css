@@ -1,0 +1,13 @@
+.home-container {
+    background-color: #FFFFFF;
+  }
+  
+  .content {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
+ .h2 {
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+  }
