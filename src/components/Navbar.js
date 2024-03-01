@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/NavbarStyle.css'
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+   const [showMenu, setShowMenu] = useState(false);
 
   return (
     <nav className="navbar">
