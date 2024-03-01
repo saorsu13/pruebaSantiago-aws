@@ -6,42 +6,18 @@ import Home from '../screens/Home'
 import BankDetail from '../screens/BankDetail'
 import AccountDetail from '../screens/AccountDetail'
 import Settings from '../screens/Settings'
-import useAuth from '../hooks/useAuth';
-import { Navigate } from 'react-router-dom';
 
 
-
-const PrivateRoute = ({ element, ...props }) => {
-  const isAuthenticated = useAuth();
-  console.log(isAuthenticated);
-  return isAuthenticated ? (
-    <Route element={element} {...props} />
-  ) : (
-    <Navigate to="/" />
-  );
-};
 const Navigation = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route exact path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route
-          path="/home"
-          element={<PrivateRoute element={<Home />} />}
-        />
-        <Route
-          path="/bank/:id"
-          element={<PrivateRoute element={<BankDetail />} />}
-        />
-        <Route
-          path="/account/:id"
-          element={<PrivateRoute element={<AccountDetail />} />}
-        />
-        <Route
-          path="/settings"
-          element={<PrivateRoute element={<Settings />} />}
-        />
+        <Route path="/home" element={<Home />} />
+        <Route path="/bank/:id" element={<BankDetail />} />
+        <Route path="/account/:id" element={<AccountDetail />} />
+        <Route path="/settings" element={<Settings />} /> 
       </Routes>
     </Router>
   );

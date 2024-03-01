@@ -7,16 +7,11 @@ const useAuth = () => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     const isAuthenticated = token !== null;
+    console.log(isAuthenticated);
     setIsAuthenticated(isAuthenticated);
   }, []);
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    const isAuthenticated = token !== null;
-    setIsAuthenticated(isAuthenticated);
-  }, [localStorage.getItem('token')]);
-
-  return isAuthenticated;
+  return { isAuthenticated, setAuth: setIsAuthenticated };
 };
 
 export default useAuth;
