@@ -13,7 +13,7 @@ const Login = () => {
 
   const handleIniciarSesion = async () => {
     try {
-      const response = await fetch('https://8377-2800-484-6883-ca10-83-f5dc-3e02-8db0.ngrok-free.app/api/login', {
+      const response = await fetch('https://30a0-3-215-255-70.ngrok-free.app/api/login', {
         method: 'POST',
       headers: {
         'Content-Type': 'application/json',
