@@ -6,13 +6,13 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
-      setShowMenu(!showMenu);
+    setShowMenu(!showMenu);
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-toggle" onClick={toggleMenu}>
-        <i className="fa fa-bars"></i>
+        <i className="fa fa-bars"></i> {/* Icono del navbar */}
       </div>
       <ul className={`nav-list ${showMenu ? 'active' : ''}`}>
         <li className="nav-item">
