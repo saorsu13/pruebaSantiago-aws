@@ -1,4 +1,4 @@
-card {
+.card {
   background-color: #FFFFFF;
   border: 1px solid #fff2f2;
   border-radius: 8px;
@@ -7,8 +7,7 @@ card {
   margin-top: 12px;
   transition: background-color 0.3s;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .card h3 {
@@ -28,6 +27,23 @@ card {
   background-color: #fdf9f9;
   cursor: pointer;
 }
+
 .card-logo img {
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .card-content {
+    flex: 1;
+  }
+
+  .card-logo {
+    margin-left: 20px;
+  }
 }
