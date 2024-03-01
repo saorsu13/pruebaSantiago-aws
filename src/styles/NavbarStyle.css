@@ -47,16 +47,23 @@
   padding: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .navbar-toggle {
-      display: none;
+    display: block;
   }
 
   .nav-list {
-      display: flex !important;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #567b84;
+    width: 100%;
+    z-index: 100;
   }
 
   .nav-list.active {
-      display: none;
+    display: flex;
+    flex-direction: column;
   }
 }
