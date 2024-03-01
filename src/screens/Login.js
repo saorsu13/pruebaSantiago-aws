@@ -44,16 +44,17 @@ const Login = () => {
     }
 
     const responseData = await response.json();
-    console.log('Contenido del cuerpo de la respuesta:', responseData);
+    console.log('Token obtenido:', responseData.token);
+    setToken(responseData.token);
+    localStorage.setItem('token', responseData.token);
     navigate('/Home');
+
     } catch (error) {
       console.error('Error al iniciar sesión (excepción):', error);
       setError('Ocurrió un error al iniciar sesión. Por favor, intenta de nuevo.');
       setIsModalOpen(true);
     }
     
-    setToken('el_token_obtenido');
-
   };
   
 

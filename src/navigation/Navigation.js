@@ -7,6 +7,7 @@ import BankDetail from '../screens/BankDetail'
 import AccountDetail from '../screens/AccountDetail'
 import Settings from '../screens/Settings'
 
+
 const Navigation = () => {
   return (
     <Router>
