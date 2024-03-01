@@ -45,6 +45,7 @@ const Login = () => {
 
     const responseData = await response.json();
     console.log('Contenido del cuerpo de la respuesta:', responseData);
+    setToken(responseData.token);
     navigate('/Home');
     } catch (error) {
       console.error('Error al iniciar sesión (excepción):', error);
@@ -52,8 +53,6 @@ const Login = () => {
       setIsModalOpen(true);
     }
     
-    setToken('el_token_obtenido');
-
   };
   
 
