@@ -25,7 +25,7 @@ const Register = () => {
         alert('La contraseña debe tener al menos 5 caracteres.');
         return;
       }
-      await axios.post('https://8377-2800-484-6883-ca10-83-f5dc-3e02-8db0.ngrok-free.app/api/register', {
+      await axios.post('https://30a0-3-215-255-70.ngrok-free.app/api/register', {
         name: nombre,
         email: correo,
         password: contrasena
