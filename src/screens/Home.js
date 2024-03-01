@@ -61,7 +61,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <Header />
-      <div className="content">
+      <main className="content">
         <h2>Listado Bancos</h2>
         {initialLoading ? (
           <div>Cargando...</div>
@@ -75,7 +75,7 @@ const Home = () => {
             </div>
           </div>
         )}
-      </div>
+      </main>
     </div>
   );
 };
