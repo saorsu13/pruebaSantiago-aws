@@ -10,6 +10,7 @@
   cursor: pointer;
   display: none;
   color: white;
+  display: block;
 }
 
 .nav-list {
