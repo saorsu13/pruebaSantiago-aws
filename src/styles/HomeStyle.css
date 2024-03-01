@@ -6,6 +6,7 @@
   .content {
   margin-left: 35px;
   margin-right: 35px;
+  margin-top: 20px;
   }
 
 @media screen and (max-width: 768px) {
